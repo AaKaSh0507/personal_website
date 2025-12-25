@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ dark: isDark }" class="min-h-screen bg-light-bg dark:bg-dark-bg transition-colors duration-300">
+  <div class="min-h-screen bg-light-bg dark:bg-dark-bg transition-colors duration-300">
     <Navbar :isDark="isDark" @toggle-theme="toggleTheme" />
     <main>
       <router-view v-slot="{ Component }">
@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 
@@ -23,6 +23,15 @@ const toggleTheme = () => {
   isDark.value = !isDark.value
   localStorage.setItem('theme', isDark.value ? 'dark' : 'light')
 }
+
+// Apply dark class to html element
+watch(isDark, (newValue) => {
+  if (newValue) {
+    document.documentElement.classList.add('dark')
+  } else {
+    document.documentElement.classList.remove('dark')
+  }
+}, { immediate: true })
 
 onMounted(() => {
   const savedTheme = localStorage.getItem('theme')
