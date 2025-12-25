@@ -46,5 +46,5 @@
 <script setup>
 import { GraduationCap } from 'lucide-vue-next'
 import ExperienceCard from '../components/ExperienceCard.vue'
-import { experiences } from '../data/mock'
+import { experiences, education } from '../data/mock'
 </script>
