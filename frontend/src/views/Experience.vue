@@ -24,16 +24,19 @@
           Education
         </h2>
         
-        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-xl p-6">
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <div>
-              <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">B.Tech in Computer Science and Engineering</h3>
-              <p class="text-brand-500 dark:text-brand-400 font-medium">Recently Graduated</p>
+        <div class="space-y-6">
+          <div v-for="edu in education" :key="edu.id" class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-xl p-6">
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-2">
+              <div>
+                <h3 class="text-lg font-semibold text-zinc-900 dark:text-white">{{ edu.degree }}</h3>
+                <p class="text-brand-500 dark:text-brand-400 font-medium">{{ edu.institution }}</p>
+              </div>
+              <span class="text-sm text-zinc-500 dark:text-zinc-500">{{ edu.period }}</span>
             </div>
+            <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-2">
+              {{ edu.description }}
+            </p>
           </div>
-          <p class="text-sm text-zinc-600 dark:text-zinc-400 mt-4">
-            Pursued advanced training in Machine Learning and Data Science to strengthen understanding of modern AI-driven systems.
-          </p>
         </div>
       </div>
     </div>
