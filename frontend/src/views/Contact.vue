@@ -38,7 +38,7 @@
               </div>
               <div>
                 <p class="text-sm text-zinc-500 dark:text-zinc-500">LinkedIn</p>
-                <p class="text-zinc-900 dark:text-white font-medium">linkedin.com/in/aakashmalik</p>
+                <p class="text-zinc-900 dark:text-white font-medium">linkedin.com/in/aakash-malik05</p>
               </div>
             </a>
 
@@ -53,7 +53,7 @@
               </div>
               <div>
                 <p class="text-sm text-zinc-500 dark:text-zinc-500">GitHub</p>
-                <p class="text-zinc-900 dark:text-white font-medium">github.com/aakashmalik</p>
+                <p class="text-zinc-900 dark:text-white font-medium">github.com/AaKaSh0507</p>
               </div>
             </a>
           </div>
