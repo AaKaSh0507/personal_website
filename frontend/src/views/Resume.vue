@@ -101,11 +101,11 @@
 </template>
 
 <script setup>
-import { FileText, Download, User, Code, Briefcase, ArrowRight } from 'lucide-vue-next'
+import { FileText, Download, User, Code, Briefcase, ArrowRight, GraduationCap } from 'lucide-vue-next'
 import Button from '../components/Button.vue'
+import { profile, education } from '../data/mock'
 
 const downloadResume = () => {
-  // In production, this would download an actual PDF
-  alert('Resume download will be available once the PDF is uploaded. Please contact via the Contact page for now.')
+  window.open(profile.resumeUrl, '_blank')
 }
 </script>
