@@ -80,20 +80,37 @@
                 <p class="font-medium text-zinc-900 dark:text-white">SDE Intern</p>
                 <p class="text-sm text-brand-500 dark:text-brand-400">DPDzero Technologies, Bangalore</p>
               </div>
-              <p class="text-sm text-zinc-500">May 2025 – Sep 2025</p>
+              <p class="text-sm text-zinc-500">May'25 - Sep'25</p>
             </div>
             <div class="flex items-start justify-between">
               <div>
                 <p class="font-medium text-zinc-900 dark:text-white">Web Developer Intern</p>
                 <p class="text-sm text-brand-500 dark:text-brand-400">ImageKit.io (Remote)</p>
               </div>
-              <p class="text-sm text-zinc-500">Jan 2024 – May 2024</p>
+              <p class="text-sm text-zinc-500">Jan'24 - May'24</p>
             </div>
           </div>
           <router-link to="/experience" class="inline-flex items-center gap-2 text-brand-500 hover:text-brand-600 text-sm font-medium mt-4 transition-colors duration-200">
             View full experience
             <ArrowRight class="w-4 h-4" />
           </router-link>
+        </div>
+
+        <!-- Education -->
+        <div class="bg-light-card dark:bg-dark-card border border-light-border dark:border-dark-border rounded-xl p-6">
+          <h3 class="text-lg font-semibold text-zinc-900 dark:text-white mb-4 flex items-center gap-3">
+            <GraduationCap class="w-5 h-5 text-brand-500" />
+            Education
+          </h3>
+          <div class="space-y-4">
+            <div v-for="edu in education" :key="edu.id" class="flex items-start justify-between">
+              <div>
+                <p class="font-medium text-zinc-900 dark:text-white">{{ edu.degree }}</p>
+                <p class="text-sm text-brand-500 dark:text-brand-400">{{ edu.institution }}</p>
+              </div>
+              <p class="text-sm text-zinc-500">{{ edu.period }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
