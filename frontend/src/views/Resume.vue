@@ -16,11 +16,11 @@
               <FileText class="w-8 h-8 text-brand-600 dark:text-brand-400" />
             </div>
             <div>
-              <h2 class="text-lg font-semibold text-zinc-900 dark:text-white">Aakash_Malik_Resume.pdf</h2>
-              <p class="text-sm text-zinc-500 dark:text-zinc-500">Last updated: July 2025</p>
+              <h2 class="text-lg font-semibold text-zinc-900 dark:text-white">Aakash_Malik_SDE_Resume.pdf</h2>
+              <p class="text-sm text-zinc-500 dark:text-zinc-500">Last updated: 2025</p>
             </div>
           </div>
-          <a href="#" @click.prevent="downloadResume" class="w-full sm:w-auto">
+          <a :href="profile.resumeUrl" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto">
             <Button variant="primary" size="lg" fullWidth class="sm:w-auto">
               <Download class="w-5 h-5" />
               Download Resume
