@@ -6,8 +6,10 @@ import Projects from '../views/Projects.vue'
 import ProjectDetail from '../views/ProjectDetail.vue'
 import TechStack from '../views/TechStack.vue'
 import Blog from '../views/Blog.vue'
+import BlogPost from '../views/BlogPost.vue'
 import Resume from '../views/Resume.vue'
 import Contact from '../views/Contact.vue'
+import Admin from '../views/Admin.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: Home, meta: { title: 'Aakash Malik | Software Development Engineer' } },
@@ -17,8 +19,10 @@ const routes = [
   { path: '/projects/:slug', name: 'ProjectDetail', component: ProjectDetail, meta: { title: 'Project | Aakash Malik' } },
   { path: '/tech-stack', name: 'TechStack', component: TechStack, meta: { title: 'Tech Stack | Aakash Malik' } },
   { path: '/blog', name: 'Blog', component: Blog, meta: { title: 'Blog | Aakash Malik' } },
+  { path: '/blog/:slug', name: 'BlogPost', component: BlogPost, meta: { title: 'Blog | Aakash Malik' } },
   { path: '/resume', name: 'Resume', component: Resume, meta: { title: 'Resume | Aakash Malik' } },
-  { path: '/contact', name: 'Contact', component: Contact, meta: { title: 'Contact | Aakash Malik' } }
+  { path: '/contact', name: 'Contact', component: Contact, meta: { title: 'Contact | Aakash Malik' } },
+  { path: '/admin', name: 'Admin', component: Admin, meta: { title: 'Admin | Aakash Malik' } }
 ]
 
 const router = createRouter({
