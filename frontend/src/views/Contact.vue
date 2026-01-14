@@ -123,6 +123,10 @@ import { ref, reactive } from 'vue'
 import { Mail, Linkedin, Github, Send } from 'lucide-vue-next'
 import Button from '../components/Button.vue'
 import { socialLinks } from '../data/mock'
+import axios from 'axios'
+
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || ''
+const API = `${BACKEND_URL}/api`
 
 const form = reactive({
   name: '',
@@ -137,24 +141,19 @@ const submitForm = async () => {
   isSubmitting.value = true
   submitStatus.value = null
   
-  // Simulate form submission (mock)
-  // In production, this would send to a backend API
   try {
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    // Store in localStorage for demo purposes
-    const messages = JSON.parse(localStorage.getItem('contactMessages') || '[]')
-    messages.push({
-      ...form,
-      timestamp: new Date().toISOString()
+    await axios.post(`${API}/contact`, {
+      name: form.name,
+      email: form.email,
+      message: form.message
     })
-    localStorage.setItem('contactMessages', JSON.stringify(messages))
     
     submitStatus.value = 'success'
     form.name = ''
     form.email = ''
     form.message = ''
   } catch (error) {
+    console.error('Failed to submit contact form:', error)
     submitStatus.value = 'error'
   } finally {
     isSubmitting.value = false
