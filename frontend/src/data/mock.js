@@ -1,4 +1,5 @@
 // Data for Aakash Malik's portfolio - extracted from resume
+import profileImg from '@/assets/myimage.jpg'
 
 export const profile = {
   name: 'Aakash Malik',
@@ -11,7 +12,7 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/aakash-malik05',
   github: 'https://www.github.com/AaKaSh0507',
   location: 'Bangalore, India',
-  profileImage: '/myimage.jpg',
+  profileImage: profileImg,
   resumeUrl: 'https://customer-assets.emergentagent.com/job_aakash-engineer/artifacts/0dfk2u8o_Aakash_Malik_SDE_Resume.pdf'
 }
 
